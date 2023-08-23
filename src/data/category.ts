@@ -36,7 +36,7 @@ export const categories: Props[] = [
       "Plan your next adventure and get travel tips and inspiration from experienced travelers, with articles covering destinations, cultures, and more.",
   },
   {
-    title: "Design",
+    title: "Cyber",
     slug: "design",
     color: "purple",
     description:
