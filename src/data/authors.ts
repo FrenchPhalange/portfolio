@@ -9,7 +9,7 @@ export type Author = Props;
 
 export const authors: Props[] = [
   {
-    name: "Mario Sanchez",
+    name: "Mario Saenchez",
     slug: "mario-sanchez",
     image: "./src/assets/authors/mario.webp",
     bio: "Mario is a Staff Engineer specialising in Frontend at Vercel, as well as being a co-founder of Acme and the content management system Sanity. Prior to this, he was a Senior Engineer at Apple.",
