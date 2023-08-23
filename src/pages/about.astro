@@ -14,16 +14,16 @@ import Link from "@components/ui/link.astro";
       <Fragment slot="desc">We are a small passionate team.</Fragment>
     </Pagetitle>
 
-    <div class="grid md:grid-cols-1 gap-10 mx-auto max-w-4xl mt-12">
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
         authors.slice(0, 3).map((item) => (
-          <div class="mx-auto">
-            <div class="grid mx-auto w-1/2 aspect-square"> 
+          <div class="group">
+            <div class="w-full aspect-square">
               <Image
                 src={item.image}
                 format="avif"
-                width={380}
-                height={380}
+                width={580}
+                height={580}
                 alt="Team"
                 class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
               />
@@ -35,7 +35,6 @@ import Link from "@components/ui/link.astro";
                 {item.name}
               </h3>
             </div>
-            {item.bio}
           </div>
         ))
       }
@@ -53,4 +52,3 @@ import Link from "@components/ui/link.astro";
     </div>
   </Container>
 </Layout>
-
