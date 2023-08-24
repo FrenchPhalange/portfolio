@@ -3,6 +3,7 @@ import Container from "@components/container.astro";
 import logoImage from "@assets/logo.svg";
 import darkLogo from "@assets/logo-dark.svg";
 import { Image } from "@astrojs/image/components";
+import Themeswitch from "@components/themeswitch.astro";
 
 interface Menu {
   label: string;
@@ -21,8 +22,9 @@ const leftmenu: Menu[] = [
   },
   {
     label: "Contact",
-    href: "/tags",
+    href: "/contact",
   },
+
 ];
 
 const rightmenu: Menu[] = [
@@ -31,16 +33,17 @@ const rightmenu: Menu[] = [
     href: "/archive",
   },
   {
-    label: "Github",
-    href: "https://github.com/web3templates/stablo-astro",
-    external: true,
-    badge: "new",
+    label: "Blog",
+    href: "/blog",
   },
   {
-    label: "Download",
-    href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
-    external: true,
+    label: "Tags",
+    href: "/tagss",
   },
+// {
+//     label: "Github",
+//     href: "hacker/hacker"
+//   }
 ];
 
 const mobilemenu: Menu[] = [...leftmenu, ...rightmenu];
@@ -105,6 +108,7 @@ const mobilemenu: Menu[] = [...leftmenu, ...rightmenu];
           ))
         }
       </div>
+      <Themeswitch />
     </div>
     <div class="navmenu-toggle hidden">
       <div
@@ -118,10 +122,12 @@ const mobilemenu: Menu[] = [...leftmenu, ...rightmenu];
               rel={item.external ? "noopener" : ""}>
               {item.label}
             </a>
+            
           ))
         }
       </div>
     </div>
+
   </nav>
 </Container>
 
